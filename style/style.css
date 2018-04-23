@@ -1,0 +1,5 @@
+/* the anchor tag we are targetting is a Link which
+    also work exactly as ahref */
+form a {
+  margin-left: 10px;
+}
