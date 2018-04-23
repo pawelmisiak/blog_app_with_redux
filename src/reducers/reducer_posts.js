@@ -1,5 +1,5 @@
-//since we are importing from index.js we do not have to specify it
 import _ from 'lodash';
+//since we are importing from index.js we do not have to specify it
 import { FETCH_POSTS } from '../actions';
 
 export default function(state = {}, action) {
