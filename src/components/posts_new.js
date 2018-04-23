@@ -4,8 +4,11 @@ import { Field, reduxForm } from 'redux-form';
 class PostsNew extends Component {
   // this function doesn't make much sense to me but it works
   renderField(field) {
+
+    const className = `form-group ${field.meta.touched && field.meta.error ? 'has-danger' : ''}`;
+
     return (
-      <div className="form-group">
+      <div className={className}>
         <label>{field.label}</label>
         <input
           className="form-control"
@@ -15,7 +18,9 @@ class PostsNew extends Component {
         {/* this will receive errors from function validate */}
         {/* if user has touched the field than check and run the
           errors, else run the empty string */}
-        {field.meta.touched ? field.meta.error : ''}
+          <div className="text-help">
+            {field.meta.touched ? field.meta.error : ''}
+          </div>
       </div>
     );
   }
